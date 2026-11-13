@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Der Absolutismus und Ludwig XIV.</title>
+<meta name="description" content="Lernseite zum Absolutismus und zu Ludwig XIV.: sechs Kapitel, Karteikarten und Quiz.">
+<meta property="og:title" content="Der Absolutismus und Ludwig XIV.">
+<meta property="og:description" content="Lernseite mit sechs Kapiteln, Karteikarten und Quiz.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#16307f">
+<link rel="icon" href="data:,">
+<script>
+(function () {
+  var m = 'hell', s = null;
+  try { s = localStorage.getItem('abs-modus'); } catch (e) {}
+  if (s === 'hell' || s === 'dunkel') m = s;
+  else { try { if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) m = 'dunkel'; } catch (e) {} }
+  document.documentElement.setAttribute('data-modus', m);
+})();
+</script>
+<style>
+:root {
+  --bg: #f5f3ea; --surface: #ffffff; --ink: #141b34; --ink2: #4a5273; --line: #d8d3c0;
+  --head: #142a75; --blue: #1c3a9e; --blue-soft: #e8edfb; --btn-blue: #1c3a9e; --bar-bg: #16307f;
+  --gold: #c9a227; --gold-deep: #735800; --gold-soft: #fbf2d2; --gold-fill: #e2b93b; --on-gold: #1b1400;
+  --ok: #1b6e37; --ok-soft: #e3f4e8; --bad: #a8231c; --bad-soft: #fbe7e5;
+  --shadow: #d8d3c0; --bar: #2446b8;
+}
+html[data-modus="dunkel"] {
+  color-scheme: dark;
+  --bg: #0a1029; --surface: #141c42; --ink: #eef1fb; --ink2: #b9c1de; --line: #2e3a70;
+  --head: #ffffff; --blue: #a9bbff; --blue-soft: #1b2757; --btn-blue: #3b5bd0; --bar-bg: #0d1740;
+  --gold: #d8b445; --gold-deep: #ecc95a; --gold-soft: #2a2510;
+  --ok: #74d391; --ok-soft: #11301c; --bad: #ff9c92; --bad-soft: #3b1715;
+  --shadow: #050919; --bar: #6a87ee;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 400 1.1875rem/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-wrap: break-word;
+}
+[hidden] { display: none !important; }
+button, a, summary { touch-action: manipulation; }
+:focus { outline: 3px solid var(--head); outline-offset: 2px; }
+:focus:not(:focus-visible) { outline: none; }
+:focus-visible { outline: 3px solid var(--head); outline-offset: 2px; }
+.leiste :focus, .leiste :focus-visible { outline-color: var(--gold-fill); }
+#nav a:focus, #nav a:focus-visible { outline-offset: -3px; }
+#nav a[aria-current="page"]:focus, #nav a[aria-current="page"]:focus-visible { outline-color: var(--on-gold); }
+.test summary:focus, .test summary:focus-visible { outline-offset: -3px; }
+[tabindex="-1"]:focus { outline: none; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* feste Leiste */
+.leiste {
+  position: -webkit-sticky; position: sticky; top: 0; z-index: 20; display: flex; align-items: center;
+  background: var(--bar-bg); border-bottom: 3px solid var(--gold);
+  padding: 6px 8px; padding-top: calc(6px + env(safe-area-inset-top));
+}
+#nav { position: relative; display: flex; flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+#nav::-webkit-scrollbar { display: none; }
+#nav a {
+  flex: none; display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px;
+  border-radius: 999px; border: 1px solid rgba(255, 255, 255, .3);
+  color: #fff; text-decoration: none; font-weight: 600; font-size: 1rem; white-space: nowrap;
+}
+#nav a[aria-current="page"] { background: var(--gold-fill); border-color: var(--gold-fill); color: var(--on-gold); }
+#nav a[data-done]::after { content: "✓"; margin-left: 6px; font-weight: 700; }
+.modus {
+  flex: none; min-height: 44px; padding: 0 12px; border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, .3); background: transparent; color: #fff;
+  font: inherit; font-size: 1rem; font-weight: 600; cursor: pointer;
+}
+
+main { max-width: 44rem; margin: 0 auto; padding: 20px 16px 72px; }
+.vor { margin: 0; font-size: 1rem; font-weight: 700; color: var(--gold-deep); }
+h1 { margin: .1em 0 .7em; font-size: 1.75rem; line-height: 1.2; color: var(--head); }
+h1::after { content: ""; display: block; width: 64px; height: 4px; margin-top: 10px; border-radius: 2px; background: var(--gold); }
+h2 { margin: 1.7em 0 .5em; font-size: 1.25rem; line-height: 1.3; color: var(--head); }
+p { margin: .6em 0; }
+a { color: var(--blue); }
+
+.kurz { margin: 16px 0; padding: 14px 16px; border: 2px solid var(--gold); border-radius: 14px; background: var(--gold-soft); }
+.kurz h2 { margin: 0 0 4px; font-size: 1rem; color: var(--gold-deep); }
+.kurz p { margin: 0; font-size: 1.25rem; font-weight: 600; line-height: 1.5; }
+
+.punkte { margin: .4em 0; padding-left: 1.3em; }
+.punkte li { margin: .55em 0; }
+.punkte li::marker { color: var(--gold-deep); font-weight: 700; }
+.karten-liste { list-style: none; margin: .6em 0; padding: 0; display: grid; gap: 10px; }
+.karten-liste li { padding: 10px 14px; border: 1px solid var(--line); border-left: 5px solid var(--btn-blue); border-radius: 10px; background: var(--surface); }
+.karten-liste b { display: block; }
+.fachwort { margin: 16px 0; padding: 12px 16px; border-radius: 12px; background: var(--blue-soft); border: 1px solid var(--line); }
+.fachwort span { display: block; font-size: 1rem; font-weight: 700; color: var(--ink2); }
+.fachwort b { font-size: 1.4rem; }
+.merke { margin: 16px 0; padding: 12px 16px; border-left: 5px solid var(--gold); border-radius: 10px; background: var(--surface); font-weight: 600; }
+
+/* Teste dich */
+.test details { margin: 10px 0; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); overflow: hidden; }
+.test summary { position: relative; min-height: 56px; padding: 14px 52px 14px 16px; font-weight: 600; cursor: pointer; list-style: none; }
+.test summary::-webkit-details-marker { display: none; }
+.test summary::after { content: "+"; content: "+" / ""; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 1.6rem; font-weight: 700; line-height: 1; color: var(--blue); }
+.test details[open] summary::after { content: "–"; content: "–" / ""; }
+.test details p { margin: 0; padding: 12px 16px 14px; border-top: 2px solid var(--gold); background: var(--blue-soft); font-weight: 600; }
+
+/* Knöpfe */
+.btn {
+  display: flex; align-items: center; justify-content: center; text-align: center; min-height: 56px; padding: 8px 16px;
+  border: 2px solid transparent; border-radius: 14px; font: inherit; font-weight: 700; font-size: 1.125rem;
+  text-decoration: none; cursor: pointer;
+}
+.btn.blau { background: var(--btn-blue); color: #fff; }
+.btn.gold { background: var(--gold-fill); color: var(--on-gold); }
+.btn.rand { background: var(--surface); color: var(--blue); border-color: var(--blue); }
+.kann {
+  display: flex; align-items: center; justify-content: center; width: 100%; min-height: 60px; margin: 30px 0 4px;
+  border: 2px solid var(--blue); border-radius: 14px; background: var(--surface); color: var(--blue);
+  font: inherit; font-weight: 700; font-size: 1.25rem; cursor: pointer;
+}
+.kann::before { content: ""; flex: none; width: 26px; height: 26px; border: 2px solid currentColor; border-radius: 7px; font-size: 1.3rem; line-height: 22px; text-align: center; }
+.kann[aria-pressed="true"] { background: var(--gold-fill); border-color: var(--gold-fill); color: var(--on-gold); }
+.kann[aria-pressed="true"]::before { content: "✓"; }
+.klein { margin: 0; font-size: 1rem; color: var(--ink2); text-align: center; }
+.blaettern { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 26px; }
+.blaettern .btn { padding-left: 8px; padding-right: 8px; }
+@media (max-width: 23rem) { .blaettern.lang { grid-template-columns: 1fr; } }
+.fehler { display: grid; gap: 8px; margin: .6em 0 18px; }
+.fehler .btn { justify-content: flex-start; text-align: left; min-height: 50px; }
+.knoepfe { display: grid; gap: 10px; margin: 22px 0; }
+
+/* Startseite */
+.stand { font-weight: 600; color: var(--ink2); }
+.kapitel { list-style: none; margin: 12px 0; padding: 0; display: grid; gap: 10px; }
+.kapitel a { display: flex; align-items: center; min-height: 62px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); color: var(--ink); text-decoration: none; font-weight: 600; }
+.kapitel .nr { flex: none; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--btn-blue); color: #fff; font-weight: 700; }
+.kapitel .name { flex: 1; }
+.kapitel .haken { flex: none; display: grid; place-items: center; width: 32px; height: 32px; border: 2px dashed var(--line); border-radius: 50%; font-weight: 700; }
+.kapitel a[data-done] .haken { border: 0; background: var(--gold-fill); color: var(--on-gold); }
+.kapitel a[data-done] .haken::before { content: "✓"; }
+.woerter { margin-top: 30px; padding: 14px 16px 6px; border: 2px solid var(--btn-blue); border-radius: 14px; background: var(--surface); }
+.woerter h2 { margin-top: 0; }
+.woerter ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 0 20px; }
+.woerter li { padding: 9px 0; border-top: 1px solid var(--line); }
+.woerter b { display: block; font-size: 1.35rem; letter-spacing: .02em; }
+.woerter span { display: block; font-size: 1rem; color: var(--ink2); letter-spacing: .04em; }
+
+/* Tabelle */
+.tab { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--surface); }
+.tab table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 1.0625rem; line-height: 1.45; }
+.tab th, .tab td { padding: 10px 12px; text-align: left; vertical-align: top; border-top: 1px solid var(--line); overflow-wrap: break-word; }
+@media (max-width: 23rem) { .tab table { font-size: 1rem; } .tab th, .tab td { padding: 9px 8px; } }
+.tab thead th { border-top: 0; background: var(--btn-blue); color: #fff; }
+.tab tbody th { width: 45%; font-weight: 700; }
+
+/* Zahlen */
+.zahlen { list-style: none; margin: .6em 0; padding: 0; display: grid; gap: 10px; }
+.zahlen li { padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.zahlen span { display: block; }
+.z-was, .z-mehr { font-size: 1rem; color: var(--ink2); }
+.z-wert { font-size: 1.45rem; font-weight: 700; line-height: 1.3; }
+
+/* Balkendiagramm */
+.chart { margin: 16px 0; padding: 14px 16px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.chart figcaption { margin-bottom: 12px; font-weight: 700; }
+.balken { display: grid; grid-template-columns: auto 1fr; gap: 10px 12px; align-items: center; }
+.balken .jahr { font-weight: 600; color: var(--ink2); font-variant-numeric: tabular-nums; }
+.balken .spur { display: flex; align-items: center; min-width: 0; padding: 3px 0; border-left: 2px solid var(--line); }
+.balken .b { flex: 0 0 var(--w); height: 24px; border-radius: 0 4px 4px 0; background: var(--bar); }
+.balken .wert { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* Schaubild */
+.fluss { list-style: none; margin: 14px 0 10px; padding: 0; display: grid; justify-items: center; }
+.fluss .kasten { width: 100%; max-width: 26rem; padding: 10px 14px; border: 2px solid var(--btn-blue); border-radius: 12px; background: var(--surface); text-align: center; font-weight: 700; }
+.fluss .kasten span { display: block; font-size: 1rem; font-weight: 500; color: var(--ink2); }
+.fluss .kasse { border-color: var(--gold); background: var(--gold-soft); }
+.fluss .pfeil { display: flex; align-items: center; padding: 3px 0; font-size: 1rem; font-weight: 600; color: var(--ink2); }
+.fluss .pfeil::before { content: "↓"; font-size: 1.8rem; line-height: 1; font-weight: 700; color: var(--gold-deep); }
+.stopp { display: flex; align-items: center; max-width: 26rem; margin: 0 auto; padding: 10px 14px; border: 2px dashed var(--bad); border-radius: 12px; background: var(--bad-soft); font-weight: 600; }
+.stopp::before { content: "✕"; flex: none; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--bad); color: var(--bg); font-weight: 700; }
+.schritte { margin: .6em 0; padding-left: 1.9em; }
+.schritte li { margin: .3em 0; break-inside: avoid; }
+.schritte li::marker { color: var(--gold-deep); font-weight: 700; }
+@media (min-width: 30rem) { .schritte { columns: 2; column-gap: 28px; } }
+
+/* Karteikarten */
+.zaehler { margin: 0 0 6px; font-weight: 700; color: var(--ink2); }
+.karte {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 100%; min-height: 16rem; padding: 22px 18px; border: 3px solid var(--btn-blue); border-radius: 18px;
+  background: var(--surface); color: var(--ink); font: inherit; text-align: center; cursor: pointer;
+  box-shadow: 0 6px 0 var(--shadow);
+}
+.karte.hinten { border-color: var(--gold); background: var(--gold-soft); }
+.k-seite { font-size: 1rem; font-weight: 700; color: var(--blue); }
+.karte.hinten .k-seite { color: var(--gold-deep); }
+.k-text { font-size: 1.4rem; font-weight: 700; line-height: 1.4; }
+.k-tipp { font-size: 1rem; color: var(--ink2); }
+.karte.dreh { animation: dreh .28s ease-in-out; }
+@keyframes dreh { 50% { transform: rotateY(90deg); } }
+.k-nav { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 18px; }
+.k-nav .btn { padding: 8px 6px; }
+
+/* Quiz */
+.fort { height: 8px; margin: 0 0 18px; border-radius: 4px; background: var(--line); overflow: hidden; }
+.fort span { display: block; height: 100%; background: var(--gold-fill); }
+.frage { margin-top: 0; font-size: 1.4rem; }
+.antworten { display: grid; gap: 10px; margin: 14px 0; }
+.antwort {
+  min-height: 60px; padding: 12px 16px; border: 2px solid var(--line); border-radius: 14px;
+  background: var(--surface); color: var(--ink); font: inherit; font-weight: 600; text-align: left; cursor: pointer;
+}
+.antwort:disabled { color: var(--ink); cursor: default; opacity: 1; }
+.antwort.richtig { border-color: var(--ok); background: var(--ok-soft); }
+.antwort.falsch { border-color: var(--bad); background: var(--bad-soft); }
+.antwort.richtig::after { content: "  ✓"; font-weight: 700; color: var(--ok); }
+.antwort.falsch::after { content: "  ✗"; font-weight: 700; color: var(--bad); }
+.rueck { margin: 12px 0; padding: 12px 16px; border-radius: 12px; font-weight: 500; }
+.rueck.ok { border-left: 6px solid var(--ok); background: var(--ok-soft); }
+.rueck.nein { border-left: 6px solid var(--bad); background: var(--bad-soft); }
+.rueck strong { display: block; font-size: 1.3rem; }
+.quiz-weiter { width: 100%; }
+.punktzahl { margin: .2em 0; font-size: 2.2rem; font-weight: 800; line-height: 1.2; color: var(--head); }
+.fuss { margin-top: 44px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 1rem; color: var(--ink2); }
+
+@media (min-width: 40rem) {
+  body { font-size: 1.25rem; }
+  h1 { font-size: 2.1rem; }
+  .knoepfe { grid-template-columns: 1fr 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { .karte.dreh { animation: none; } }
+
+/* Abstände ohne flex-gap, für ältere Handys */
+.modus { margin-left: 6px; }
+#nav a + a { margin-left: 6px; }
+.kann::before { margin-right: 12px; }
+.kapitel .name { margin: 0 12px; }
+.balken .wert { margin-left: 8px; }
+.fluss .pfeil::before { margin-right: 8px; }
+.stopp::before { margin-right: 12px; }
+.karte > span + span { margin-top: 14px; }
+
+@media (forced-colors: active) {
+  .balken .b, .fort span { forced-color-adjust: none; background: Highlight; }
+  #nav a[aria-current="page"] { border: 3px solid Highlight; }
+  .kann[aria-pressed="true"] { border-width: 4px; }
+}
+@media print {
+  html[data-modus="dunkel"] {
+    color-scheme: light;
+    --bg: #f5f3ea; --surface: #ffffff; --ink: #141b34; --ink2: #4a5273; --line: #d8d3c0;
+    --head: #142a75; --blue: #1c3a9e; --blue-soft: #e8edfb; --btn-blue: #1c3a9e; --bar-bg: #16307f;
+    --gold: #c9a227; --gold-deep: #735800; --gold-soft: #fbf2d2; --gold-fill: #e2b93b; --on-gold: #1b1400;
+    --ok: #1b6e37; --ok-soft: #e3f4e8; --bad: #a8231c; --bad-soft: #fbe7e5;
+    --shadow: #d8d3c0; --bar: #2446b8;
+  }
+  .leiste, .blaettern, .kann, .klein, .knoepfe, .k-nav { display: none !important; }
+  .balken .b, .fort span, .kapitel .nr { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+<noscript><style>.page[hidden] { display: block !important; margin-top: 48px; } .nur-js, .leiste, #p-karten .karte, #p-karten .k-nav, #p-karten .zaehler, #p-karten .knoepfe { display: none !important; }</style></noscript>
+</head>
+<body>
+
+<header class="leiste">
+  <nav id="nav" aria-label="Kapitel">
+    <a href="#start" data-seite="start">Start</a>
+    <a href="#k1" data-seite="k1" data-kap="1">1 Absolutismus</a>
+    <a href="#k2" data-seite="k2" data-kap="2">2 Sonnenkönig</a>
+    <a href="#k3" data-seite="k3" data-kap="3">3 Herrscherbild</a>
+    <a href="#k4" data-seite="k4" data-kap="4">4 Versailles</a>
+    <a href="#k5" data-seite="k5" data-kap="5">5 Geld und Colbert</a>
+    <a href="#k6" data-seite="k6" data-kap="6">6 Merkantilismus</a>
+    <a href="#karten" data-seite="karten">Karteikarten</a>
+    <a href="#quiz" data-seite="quiz">Quiz</a>
+  </nav>
+  <button type="button" class="modus nur-js" id="modus">Dunkel</button>
+</header>
+
+<main>
+
+<!-- STARTSEITE -->
+<section class="page" id="p-start">
+  <p class="vor">Lernseite Geschichte</p>
+  <h1 tabindex="-1">Der Absolutismus und Ludwig XIV.</h1>
+  <p class="stand nur-js" id="stand">Du kannst 0 von 6 Kapiteln.</p>
+  <ol class="kapitel">
+    <li><a href="#k1" data-kap="1"><span class="nr">1</span><span class="name">Absolutismus</span><span class="haken" aria-hidden="true"></span><span class="sr"></span></a></li>
+    <li><a href="#k2" data-kap="2"><span class="nr">2</span><span class="name">Der Sonnenkönig</span><span class="haken" aria-hidden="true"></span><span class="sr"></span></a></li>
+    <li><a href="#k3" data-kap="3"><span class="nr">3</span><span class="name">Das Herrscherbild</span><span class="haken" aria-hidden="true"></span><span class="sr"></span></a></li>
+    <li><a href="#k4" data-kap="4"><span class="nr">4</span><span class="name">Schloss Versailles</span><span class="haken" aria-hidden="true"></span><span class="sr"></span></a></li>
+    <li><a href="#k5" data-kap="5"><span class="nr">5</span><span class="name">Geld und Colbert</span><span class="haken" aria-hidden="true"></span><span class="sr"></span></a></li>
+    <li><a href="#k6" data-kap="6"><span class="nr">6</span><span class="name">Merkantilismus</span><span class="haken" aria-hidden="true"></span><span class="sr"></span></a></li>
+  </ol>
+  <div class="knoepfe">
+    <a class="btn blau" href="#karten">Karteikarten üben</a>
+    <a class="btn gold" href="#quiz">Quiz starten</a>
+  </div>
+  <div class="woerter">
+    <h2>So schreibt man die schwierigen Wörter</h2>
+    <ul>
+      <li><b>Absolutismus</b><span>Ab·so·lu·tis·mus</span></li>
+      <li><b>Merkantilismus</b><span>Mer·kan·ti·lis·mus</span></li>
+      <li><b>Merkmale</b><span>Merk·ma·le</span></li>
+      <li><b>Manufaktur</b><span>Ma·nu·fak·tur</span></li>
+      <li><b>Massenproduktion</b><span>Mas·sen·pro·duk·ti·on</span></li>
+      <li><b>Handelsbilanz</b><span>Han·dels·bi·lanz</span></li>
+      <li><b>Schutzzölle</b><span>Schutz·zöl·le</span></li>
+      <li><b>Rohstoffe</b><span>Roh·stof·fe</span></li>
+      <li><b>Kolonien</b><span>Ko·lo·ni·en</span></li>
+      <li><b>Akademien</b><span>A·ka·de·mi·en</span></li>
+      <li><b>Handelsflotte</b><span>Han·dels·flot·te</span></li>
+      <li><b>Versailles</b><span>Ver·sailles</span></li>
+      <li><b>Staatsausgaben</b><span>Staats·aus·ga·ben</span></li>
+      <li><b>stehendes Heer</b><span>ste·hen·des Heer</span></li>
+    </ul>
+  </div>
+  <p class="fuss">Kein Login. Kein Tracking. „Kann ich“ wird nur in deinem Browser gespeichert.</p>
+</section>
+
+<!-- KAPITEL 1 -->
+<section class="page" id="p-k1" hidden>
+  <p class="vor">Kapitel 1</p>
+  <h1 tabindex="-1">Absolutismus</h1>
+  <div class="kurz">
+    <h2>Kurz gesagt</h2>
+    <p>Im Absolutismus regiert der König allein. Er steht über den Gesetzen. Alle müssen seinem Willen gehorchen.</p>
+  </div>
+  <h2>Stichpunkte</h2>
+  <ul class="punkte">
+    <li>Das Wort kommt vom lateinischen „absolutus“ = losgelöst, uneingeschränkt.</li>
+    <li><b>Definition:</b> Eine Herrschaftsform, in der Menschen und Natur, losgelöst von allen Gesetzen, nur einem uneingeschränkten Willen gehorchen sollen: dem Willen des Königs.</li>
+    <li><b>Wichtigstes Beispiel:</b> Ludwig XIV., König von Frankreich 1643–1715.</li>
+  </ul>
+  <h2>Worauf stützt sich der König?</h2>
+  <ul class="karten-liste">
+    <li><b>Verwaltung</b>Hohe Beamte (Intendanten) verwalten das Land zentral.</li>
+    <li><b>Stehendes Heer</b>Eine Armee, die immer bereit ist, auch im Frieden.</li>
+    <li><b>Hof in Versailles</b>Der Adel lebt beim König und verliert Rechte.</li>
+    <li><b>Wirtschaft</b>Der Merkantilismus bringt das Geld.</li>
+  </ul>
+  <h2>Teste dich</h2>
+  <div class="test">
+    <details><summary>Was bedeutet „absolutus“?</summary><p>Losgelöst, uneingeschränkt.</p></details>
+    <details><summary>Was ist ein stehendes Heer?</summary><p>Eine Armee, die immer bereitsteht.</p></details>
+    <details><summary>Wer verwaltete das Land?</summary><p>Hohe Beamte, die Intendanten.</p></details>
+  </div>
+  <button type="button" class="kann nur-js" data-kap="1" aria-pressed="false">Kann ich</button>
+  <p class="klein nur-js">Tippe, wenn du das Kapitel kannst.</p>
+  <div class="blaettern">
+    <a class="btn rand" href="#start">← Start</a>
+    <a class="btn blau" href="#k2">Kapitel 2 →</a>
+  </div>
+</section>
+
+<!-- KAPITEL 2 -->
+<section class="page" id="p-k2" hidden>
+  <p class="vor">Kapitel 2</p>
+  <h1 tabindex="-1">Der Sonnenkönig</h1>
+  <div class="kurz">
+    <h2>Kurz gesagt</h2>
+    <p>Ludwig XIV. nannte sich Sonnenkönig. Die Sonne war sein Symbol. Alles am Hof sollte sich um ihn drehen.</p>
+  </div>
+  <h2>Stichpunkte</h2>
+  <ul class="punkte">
+    <li>Er regiert sein Land nach dem Willen Gottes.</li>
+    <li>Könige sind Gottes Boten. Deshalb müssen ihm alle gehorchen.</li>
+    <li>Er steht im Zentrum. Alles dreht sich um ihn.</li>
+    <li>Er muss sich vor keinem Menschen rechtfertigen, nur vor Gott.</li>
+    <li>Er sieht sich als einzigartig, fast heilig.</li>
+  </ul>
+  <p class="fachwort"><span>Fachwort</span><b>Gottesgnadentum</b></p>
+  <h2>Teste dich</h2>
+  <div class="test">
+    <details><summary>Warum „Sonnenkönig“?</summary><p>Die Sonne war sein Symbol, er war der Mittelpunkt des Hofes.</p></details>
+    <details><summary>Von wem hat er die Macht?</summary><p>Von Gott.</p></details>
+  </div>
+  <button type="button" class="kann nur-js" data-kap="2" aria-pressed="false">Kann ich</button>
+  <p class="klein nur-js">Tippe, wenn du das Kapitel kannst.</p>
+  <div class="blaettern">
+    <a class="btn rand" href="#k1">← Kapitel 1</a>
+    <a class="btn blau" href="#k3">Kapitel 3 →</a>
+  </div>
+</section>
+
+<!-- KAPITEL 3 -->
+<section class="page" id="p-k3" hidden>
+  <p class="vor">Kapitel 3</p>
+  <h1 tabindex="-1">Das Herrscherbild</h1>
+  <div class="kurz">
+    <h2>Kurz gesagt</h2>
+    <p>Das Gemälde ist Werbung für den König. Jedes Teil soll sagen: Dieser Mann ist mächtig, reich und von Gott gewollt.</p>
+  </div>
+  <h2>Fakten</h2>
+  <ul class="punkte">
+    <li><b>Maler:</b> Hyacinthe Rigaud, 1701. Ölgemälde, 2,77 m × 1,94 m.</li>
+    <li>Hing im Thronsaal von Versailles, heute im Louvre in Paris.</li>
+    <li>Es hing so hoch, dass die Füße des Königs auf Augenhöhe waren. Jeder musste zu ihm aufblicken.</li>
+  </ul>
+  <h2>Was man sieht und was es zeigen soll</h2>
+  <div class="tab">
+    <table>
+      <thead><tr><th scope="col">Was man sieht</th><th scope="col">Was es zeigen soll</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Roter Vorhang mit präch&shy;tigen Falten</th><td>Reichtum, wie eine Bühne</td></tr>
+        <tr><th scope="row">Starke Säule</th><td>Stärke und Stabili&shy;tät</td></tr>
+        <tr><th scope="row">Lange Locken&shy;perücke</th><td>edel, könig&shy;lich, wirkt jünger (er war über 60)</td></tr>
+        <tr><th scope="row">Ritter&shy;orden</th><td>hoher Rang, Macht&shy;symbol</td></tr>
+        <tr><th scope="row">Thron</th><td>Herrscher, Macht</td></tr>
+        <tr><th scope="row">Schwert</th><td>Kraft, Anfüh&shy;rer des Heeres, Furcht einflö&shy;ßend</td></tr>
+        <tr><th scope="row">Langer Mantel mit golde&shy;nen Lilien</th><td>Zeichen der Könige von Frank&shy;reich, Reichtum</td></tr>
+        <tr><th scope="row">Krone</th><td>Herrschafts&shy;macht</td></tr>
+        <tr><th scope="row">Stab mit goldener Hand</th><td>richter&shy;liche Gewalt</td></tr>
+        <tr><th scope="row">Zepter</th><td>er regiert das Land</td></tr>
+        <tr><th scope="row">Göttin der Gerechtig&shy;keit an der Säule</th><td>Gerechtig&shy;keit</td></tr>
+        <tr><th scope="row">Weiße Strümpfe, elegante Schuhe</th><td>elegant, jung, selbst&shy;bewusst</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h2>Was will der König erreichen?</h2>
+  <ul class="punkte">
+    <li>Macht und Entscheidungsgewalt zeigen</li>
+    <li>Alle sollen zu ihm aufblicken</li>
+    <li>stark, siegreich, selbstbewusst</li>
+    <li>jung, elegant, edel, königlich, reich</li>
+  </ul>
+  <h2>Teste dich</h2>
+  <div class="test">
+    <details><summary>Warum hing das Bild so hoch?</summary><p>Damit man aufblicken musste.</p></details>
+    <details><summary>Wofür steht die Lilie?</summary><p>Für die französischen Könige.</p></details>
+    <details><summary>Wofür steht das Schwert?</summary><p>Kraft, Anführer des Heeres.</p></details>
+  </div>
+  <button type="button" class="kann nur-js" data-kap="3" aria-pressed="false">Kann ich</button>
+  <p class="klein nur-js">Tippe, wenn du das Kapitel kannst.</p>
+  <div class="blaettern">
+    <a class="btn rand" href="#k2">← Kapitel 2</a>
+    <a class="btn blau" href="#k4">Kapitel 4 →</a>
+  </div>
+</section>
+
+<!-- KAPITEL 4 -->
+<section class="page" id="p-k4" hidden>
+  <p class="vor">Kapitel 4</p>
+  <h1 tabindex="-1">Schloss Versailles</h1>
+  <div class="kurz">
+    <h2>Kurz gesagt</h2>
+    <p>Versailles zeigt Reichtum und Macht von Ludwig XIV. und half ihm, den Adel zu kontrollieren.</p>
+  </div>
+  <h2>Merkmale</h2>
+  <ol class="punkte">
+    <li>Große, prunkvolle Räume mit aufwendigen Verzierungen.</li>
+    <li><b>Spiegelsaal:</b> besonders prachtvoll, viele Spiegel, große Fenster.</li>
+    <li><b>Königlicher Hof:</b> Versailles war der Mittelpunkt des Hoflebens.</li>
+  </ol>
+  <h2>Wie zeigt das die Macht?</h2>
+  <ul class="punkte">
+    <li>Das riesige Schloss zeigt: Der König kann sich alles leisten.</li>
+    <li>Spiegel und kostbare Ausstattung zeigen Reichtum und hohen Anspruch.</li>
+    <li>Viele Adlige lebten am Hof oder in der Nähe, um die Aufmerksamkeit des Königs zu bekommen.</li>
+    <li>So konnte der König die Adligen besser kontrollieren. Durch das Hofzeremoniell verlor der Adel immer mehr Rechte.</li>
+  </ul>
+  <h2>Zahlen</h2>
+  <ul class="zahlen">
+    <li><span class="z-was">Garten</span><span class="z-wert">rund 800 Hektar</span><span class="z-mehr">8.000.000 m²</span></li>
+    <li><span class="z-was">Schloss</span><span class="z-wert">rund 63.000 m²</span></li>
+    <li><span class="z-was">Kosten laut Heft</span><span class="z-wert">300.000.000 Livres</span><span class="z-mehr">nur Schätzung</span></li>
+  </ul>
+  <h2>Teste dich</h2>
+  <div class="test">
+    <details><summary>Warum ist Versailles ein Machtsymbol?</summary><p>Zeigt Reichtum und Macht, half bei der Kontrolle des Adels.</p></details>
+    <details><summary>Warum wollten Adlige am Hof leben?</summary><p>Nähe und Aufmerksamkeit des Königs.</p></details>
+  </div>
+  <button type="button" class="kann nur-js" data-kap="4" aria-pressed="false">Kann ich</button>
+  <p class="klein nur-js">Tippe, wenn du das Kapitel kannst.</p>
+  <div class="blaettern">
+    <a class="btn rand" href="#k3">← Kapitel 3</a>
+    <a class="btn blau" href="#k5">Kapitel 5 →</a>
+  </div>
+</section>
+
+<!-- KAPITEL 5 -->
+<section class="page" id="p-k5" hidden>
+  <p class="vor">Kapitel 5</p>
+  <h1 tabindex="-1">Geld und Colbert</h1>
+  <div class="kurz">
+    <h2>Kurz gesagt</h2>
+    <p>Ludwig XIV. gab fast doppelt so viel aus wie vorher. Die Steuern reichten nicht. Colbert sollte neue Geldquellen finden.</p>
+  </div>
+  <figure class="chart">
+    <figcaption>Staatsausgaben in Mio. Livres</figcaption>
+    <div class="balken" role="img" aria-label="Balkendiagramm: 1669 waren es 70 Mio. Livres. 1678 waren es 129,5 Mio. Livres.">
+      <span class="jahr">1669</span>
+      <span class="spur"><span class="b" style="--w:43.2%" title="1669: 70 Mio. Livres"></span><span class="wert">70</span></span>
+      <span class="jahr">1678</span>
+      <span class="spur"><span class="b" style="--w:80%" title="1678: 129,5 Mio. Livres"></span><span class="wert">129,5</span></span>
+    </div>
+  </figure>
+  <h2>Gründe für die steigenden Ausgaben</h2>
+  <ul class="punkte">
+    <li>Bau von Schloss Versailles</li>
+    <li>Hofstaat wurde größer und teurer</li>
+    <li>Verwaltung mit vielen Beamten</li>
+    <li>Stehendes Heer</li>
+    <li>Mehrere Kriege (Frankreich sollte stärkste Macht Europas werden)</li>
+  </ul>
+  <p class="merke">Die Steuern zahlte vor allem der dritte Stand (Bürger und Bauern). Das reichte nicht, besonders im Krieg. Der Staat machte Schulden.</p>
+  <h2>Colbert</h2>
+  <ul class="punkte">
+    <li>Jean-Baptiste Colbert, Finanzminister („Generalkontrolleur der Finanzen“). <b>Aufgabe:</b> Einnahmen des Staates erhöhen.</li>
+    <li><b>Grundgedanke:</b> Nur ein reicher König kann ein starker König sein.</li>
+    <li>Er wollte nicht nur Steuern erhöhen, sondern neue Geldquellen schaffen.</li>
+  </ul>
+  <h2>Colberts Ziele laut Quelle</h2>
+  <ul class="punkte">
+    <li>Bisher kaufen Franzosen fertige Waren bei den Holländern. Das Geld fließt ins Ausland.</li>
+    <li>Frankreich soll eigene Manufakturen bauen.</li>
+    <li>Dann reicht es für den eigenen Bedarf und für Überschüsse zur Ausfuhr (Export).</li>
+    <li>Der Export bringt Geld ins Land.</li>
+    <li><b>Ziel:</b> Macht und Größe des Staates vermehren.</li>
+  </ul>
+  <h2>Teste dich</h2>
+  <div class="test">
+    <details><summary>Drei Gründe für hohe Ausgaben?</summary><p>z. B. Versailles, Heer, Kriege.</p></details>
+    <details><summary>Colberts Grundgedanke?</summary><p>Nur ein reicher König ist ein starker König.</p></details>
+    <details><summary>Wer zahlte die Steuern?</summary><p>Der dritte Stand.</p></details>
+  </div>
+  <button type="button" class="kann nur-js" data-kap="5" aria-pressed="false">Kann ich</button>
+  <p class="klein nur-js">Tippe, wenn du das Kapitel kannst.</p>
+  <div class="blaettern">
+    <a class="btn rand" href="#k4">← Kapitel 4</a>
+    <a class="btn blau" href="#k6">Kapitel 6 →</a>
+  </div>
+</section>
+
+<!-- KAPITEL 6 -->
+<section class="page" id="p-k6" hidden>
+  <p class="vor">Kapitel 6</p>
+  <h1 tabindex="-1">Merkantilismus</h1>
+  <div class="kurz">
+    <h2>Kurz gesagt</h2>
+    <p>Merkantilismus ist das Wirtschaftssystem des Absolutismus. Regel: viel ins Ausland verkaufen, wenig dort kaufen.</p>
+  </div>
+  <h2>Merkmale</h2>
+  <ol class="punkte">
+    <li>Massenproduktion in Manufakturen</li>
+    <li>Positive Handelsbilanz: mehr Export als Import</li>
+    <li>Rohstoffe aus den Kolonien (Afrika, Ostindien) werden in Frankreich zu Fertigprodukten verarbeitet</li>
+    <li>Schutzzölle auf fremde Waren („Zollmauer“)</li>
+    <li>Prämien für den Export hochwertiger Produkte, Handelsverträge</li>
+    <li>Ausbau der Handelswege (Straßen, Kanäle)</li>
+    <li>Starke Handelsflotte und Handelskompanien (z. B. Ostindische Handelskompanie)</li>
+    <li>Einheitliche Maße und Gewichte</li>
+    <li>Akademien bilden Fachkräfte und Wissenschaftler aus</li>
+  </ol>
+  <p class="merke">Politik und Wirtschaft gehören zusammen: Der Staat fördert die Wirtschaft und bekommt dafür Geld durch Zölle und Steuern.</p>
+  <h2>Schaubild</h2>
+  <ol class="fluss">
+    <li class="kasten">Kolonien</li>
+    <li class="pfeil">billige Rohstoffe</li>
+    <li class="kasten">Frankreich<span>Manufakturen machen Fertigwaren</span></li>
+    <li class="pfeil">viele Fertigwaren als Export</li>
+    <li class="kasten">Ausland</li>
+    <li class="pfeil">Geld fließt nach Frankreich</li>
+    <li class="kasten kasse">Staatskasse des Königs<span>bezahlt Heer, Hof, Schlösser</span></li>
+  </ol>
+  <p class="stopp">Fremde Fertigwaren werden durch Schutzzölle gestoppt.</p>
+  <h2>Arbeit in der Manufaktur</h2>
+  <ul class="punkte">
+    <li>Viele Arbeiter in einem Betrieb</li>
+    <li><b>Arbeitsteilung:</b> Jeder macht nur einen Arbeitsschritt</li>
+    <li>Handarbeit, noch keine Maschinen</li>
+    <li><b>Vorteil:</b> schneller, mehr, billiger</li>
+  </ul>
+  <h2>Beispiel: Spielkartenmanufaktur Paris um 1680, 14 Schritte</h2>
+  <ol class="schritte">
+    <li>Papier pressen</li>
+    <li>trocknen</li>
+    <li>Papierlagen verleimen</li>
+    <li>wieder trocknen</li>
+    <li>mit Schablonen bemalen</li>
+    <li>von Hand nachmalen</li>
+    <li>lackieren</li>
+    <li>aufwärmen</li>
+    <li>polieren</li>
+    <li>zerschneiden</li>
+    <li>Qualität prüfen</li>
+    <li>zu Spielen sortieren</li>
+    <li>verpacken</li>
+    <li>verkaufen</li>
+  </ol>
+  <h2>Teste dich</h2>
+  <div class="test">
+    <details><summary>Positive Handelsbilanz?</summary><p>Mehr Export als Import.</p></details>
+    <details><summary>Wozu Schutzzölle?</summary><p>Machen fremde Waren teuer.</p></details>
+    <details><summary>Unterschied Manufaktur und Fabrik?</summary><p>Handarbeit statt Maschinen.</p></details>
+    <details><summary>Woher kamen die Rohstoffe?</summary><p>Aus den Kolonien.</p></details>
+  </div>
+  <button type="button" class="kann nur-js" data-kap="6" aria-pressed="false">Kann ich</button>
+  <p class="klein nur-js">Tippe, wenn du das Kapitel kannst.</p>
+  <div class="blaettern lang">
+    <a class="btn rand" href="#k5">← Kapitel 5</a>
+    <a class="btn blau" href="#karten">Karteikarten →</a>
+  </div>
+</section>
+
+<!-- KARTEIKARTEN -->
+<section class="page" id="p-karten" hidden>
+  <p class="vor">Üben</p>
+  <h1 tabindex="-1">Karteikarten</h1>
+  <p class="zaehler" id="k-zaehler">Karte 1 von 23</p>
+  <noscript><p>Die Karteikarten brauchen JavaScript.</p></noscript>
+  <button type="button" class="karte" id="karte" aria-live="polite">
+    <span class="k-seite" id="k-seite">Frage</span>
+    <span class="k-text" id="k-text"></span>
+    <span class="k-tipp" id="k-tipp">Tippen: Antwort zeigen</span>
+  </button>
+  <div class="k-nav">
+    <button type="button" class="btn rand" id="k-zurueck">Zurück</button>
+    <button type="button" class="btn gold" id="k-mischen">Mischen</button>
+    <button type="button" class="btn blau" id="k-weiter">Weiter</button>
+  </div>
+  <div class="knoepfe">
+    <a class="btn rand" href="#quiz">Quiz starten</a>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section class="page" id="p-quiz" hidden>
+  <p class="vor">Üben</p>
+  <h1 tabindex="-1">Quiz</h1>
+  <div id="quiz-box"></div>
+  <noscript><p>Das Quiz braucht JavaScript.</p></noscript>
+</section>
+
+</main>
+
+<script>
+(function () {
+  'use strict';
+
+  var SEITEN = ['start', 'k1', 'k2', 'k3', 'k4', 'k5', 'k6', 'karten', 'quiz'];
+  var NAMEN = {
+    k1: '1 Absolutismus', k2: '2 Der Sonnenkönig', k3: '3 Das Herrscherbild', k4: '4 Schloss Versailles',
+    k5: '5 Geld und Colbert', k6: '6 Merkantilismus', karten: 'Karteikarten', quiz: 'Quiz'
+  };
+  var TITEL = 'Der Absolutismus und Ludwig XIV.';
+
+  // Frage vorn, Antwort hinten
+  var KARTEN = [
+    ['Was ist Absolutismus?', 'Der König regiert allein. Er steht über den Gesetzen. Alle müssen seinem Willen gehorchen.'],
+    ['Was bedeutet „absolutus“?', 'Losgelöst, uneingeschränkt.'],
+    ['Was ist ein stehendes Heer?', 'Eine Armee, die immer bereitsteht.'],
+    ['Wer verwaltete das Land?', 'Hohe Beamte, die Intendanten.'],
+    ['Wann war Ludwig XIV. König von Frankreich?', '1643–1715.'],
+    ['Warum nannte sich Ludwig XIV. „Sonnenkönig“?', 'Die Sonne war sein Symbol, er war der Mittelpunkt des Hofes.'],
+    ['Von wem hat der König die Macht?', 'Von Gott.'],
+    ['Welches Fachwort passt zu: „Der König regiert nach dem Willen Gottes“?', 'Gottesgnadentum.'],
+    ['Wer malte das Herrscherbild? Und wann?', 'Hyacinthe Rigaud, 1701.'],
+    ['Warum hing das Herrscherbild so hoch?', 'Damit man aufblicken musste.'],
+    ['Wofür steht die Lilie?', 'Für die französischen Könige.'],
+    ['Wofür steht das Schwert auf dem Herrscherbild?', 'Kraft, Anführer des Heeres.'],
+    ['Warum ist Versailles ein Machtsymbol?', 'Zeigt Reichtum und Macht, half bei der Kontrolle des Adels.'],
+    ['Warum wollten Adlige am Hof leben?', 'Nähe und Aufmerksamkeit des Königs.'],
+    ['Nenne drei Gründe für die hohen Ausgaben.', 'z. B. Versailles, Heer, Kriege.'],
+    ['Wer war Jean-Baptiste Colbert?', 'Der Finanzminister. Seine Aufgabe: Einnahmen des Staates erhöhen.'],
+    ['Was war Colberts Grundgedanke?', 'Nur ein reicher König ist ein starker König.'],
+    ['Wer zahlte die Steuern?', 'Der dritte Stand.'],
+    ['Was ist Merkantilismus?', 'Das Wirtschaftssystem des Absolutismus. Regel: viel ins Ausland verkaufen, wenig dort kaufen.'],
+    ['Was ist eine positive Handelsbilanz?', 'Mehr Export als Import.'],
+    ['Wozu sind Schutzzölle da?', 'Sie machen fremde Waren teuer.'],
+    ['Was ist der Unterschied zwischen Manufaktur und Fabrik?', 'Handarbeit statt Maschinen.'],
+    ['Woher kamen die Rohstoffe?', 'Aus den Kolonien.']
+  ];
+
+  // k = Kapitel, f = Frage, a = Antworten (die erste ist richtig), e = Erklärung
+  var QUIZ = [
+    { k: 1, f: 'Was bedeutet das lateinische Wort „absolutus“?',
+      a: ['Losgelöst, uneingeschränkt', 'Gerecht und gleich', 'Reich und mächtig'],
+      e: '„Absolutus“ bedeutet losgelöst und uneingeschränkt.' },
+    { k: 1, f: 'Wer regiert im Absolutismus?',
+      a: ['Der König allein', 'Der Adel', 'Der dritte Stand'],
+      e: 'Im Absolutismus regiert der König allein und steht über den Gesetzen.' },
+    { k: 1, f: 'Was ist ein stehendes Heer?',
+      a: ['Eine Armee, die immer bereit ist, auch im Frieden', 'Eine Armee, die es nur im Krieg gibt', 'Die Beamten in der Verwaltung'],
+      e: 'Ein stehendes Heer ist eine Armee, die immer bereit ist, auch im Frieden.' },
+    { k: 1, f: 'Wie heißen die hohen Beamten, die das Land verwalten?',
+      a: ['Intendanten', 'Hofstaat', 'Dritter Stand'],
+      e: 'Die Intendanten sind hohe Beamte und verwalten das Land zentral.' },
+    { k: 2, f: 'Warum nannte sich Ludwig XIV. „Sonnenkönig“?',
+      a: ['Die Sonne war sein Symbol und alles sollte sich um ihn drehen', 'Sein Schloss war ganz aus Gold und glänzte wie die Sonne', 'Er regierte nur im Sommer, wenn die Sonne schien'],
+      e: 'Die Sonne war sein Symbol und er war der Mittelpunkt des Hofes.' },
+    { k: 2, f: 'Von wem hat der König seine Macht?',
+      a: ['Von Gott', 'Vom Adel', 'Von den Beamten'],
+      e: 'Seine Macht kommt von Gott: Er regiert nach dem Willen Gottes und Könige sind Gottes Boten.' },
+    { k: 2, f: 'Welches Fachwort passt zu: „Der König regiert nach dem Willen Gottes“?',
+      a: ['Gottesgnadentum', 'Merkantilismus', 'Handelsbilanz'],
+      e: 'Das Fachwort dafür heißt Gottesgnadentum.' },
+    { k: 3, f: 'Warum hing das Herrscherbild so hoch?',
+      a: ['Damit jeder zum König aufblicken musste', 'Damit es mehr Licht bekam', 'Damit es niemand sehen konnte'],
+      e: 'Die Füße des Königs waren auf Augenhöhe, deshalb musste jeder zu ihm aufblicken.' },
+    { k: 3, f: 'Wofür stehen die goldenen Lilien auf dem Mantel?',
+      a: ['Für die Könige von Frankreich', 'Für die Gerechtigkeit', 'Für das Heer'],
+      e: 'Die goldenen Lilien sind das Zeichen der Könige von Frankreich.' },
+    { k: 3, f: 'Wofür steht das Schwert auf dem Herrscherbild?',
+      a: ['Für Kraft: Der König ist Anführer des Heeres', 'Für richterliche Gewalt', 'Für Reichtum'],
+      e: 'Das Schwert steht für Kraft und zeigt den König als Anführer des Heeres.' },
+    { k: 4, f: 'Was zeigt das riesige Schloss Versailles?',
+      a: ['Reichtum und Macht des Königs', 'Dass der König sparen musste', 'Dass der Adel regierte'],
+      e: 'Versailles zeigt Reichtum und Macht von Ludwig XIV.' },
+    { k: 4, f: 'Warum wollten viele Adlige am Hof leben?',
+      a: ['Sie wollten die Aufmerksamkeit des Königs bekommen', 'Sie wollten in Manufakturen arbeiten', 'Sie wollten Schutzzölle bezahlen'],
+      e: 'Die Adligen wollten nah beim König sein und seine Aufmerksamkeit bekommen.' },
+    { k: 4, f: 'Was passierte mit dem Adel durch das Hofzeremoniell?',
+      a: ['Er verlor immer mehr Rechte', 'Er bekam immer mehr Rechte', 'Er regierte das Land'],
+      e: 'Durch das Hofzeremoniell verlor der Adel immer mehr Rechte.' },
+    { k: 5, f: 'Wie hoch waren die Staatsausgaben im Jahr 1678?',
+      a: ['129,5 Mio. Livres', '70 Mio. Livres', '200 Mio. Livres'],
+      e: 'Die Ausgaben stiegen von 70 Mio. Livres im Jahr 1669 auf 129,5 Mio. Livres im Jahr 1678.' },
+    { k: 5, f: 'Was war Colberts Grundgedanke?',
+      a: ['Nur ein reicher König kann ein starker König sein', 'Nur ein armer König ist ein guter König', 'Der Adel soll alle Steuern zahlen'],
+      e: 'Colberts Grundgedanke war: Nur ein reicher König kann ein starker König sein.' },
+    { k: 5, f: 'Wer zahlte vor allem die Steuern?',
+      a: ['Der dritte Stand (Bürger und Bauern)', 'Der Adel', 'Der König'],
+      e: 'Die Steuern zahlte vor allem der dritte Stand, also Bürger und Bauern.' },
+    { k: 6, f: 'Was ist eine positive Handelsbilanz?',
+      a: ['Mehr Export als Import', 'Mehr Import als Export', 'Gleich viel Export und Import'],
+      e: 'Bei einer positiven Handelsbilanz gibt es mehr Export als Import.' },
+    { k: 6, f: 'Wozu sind Schutzzölle da?',
+      a: ['Sie machen fremde Waren teuer', 'Sie machen fremde Waren billig', 'Sie bezahlen die Arbeiter'],
+      e: 'Schutzzölle machen fremde Waren teuer und stoppen sie wie eine Zollmauer.' },
+    { k: 6, f: 'Woher kamen die Rohstoffe für die Manufakturen in Frankreich?',
+      a: ['Aus den Kolonien', 'Aus Holland', 'Aus Versailles'],
+      e: 'Die billigen Rohstoffe kamen aus den Kolonien, zum Beispiel aus Afrika und Ostindien.' },
+    { k: 6, f: 'Was ist der Unterschied zwischen Manufaktur und Fabrik?',
+      a: ['In der Manufaktur gibt es Handarbeit, noch keine Maschinen', 'In der Manufaktur arbeiten nur Maschinen, keine Menschen', 'In der Manufaktur arbeitet nur ein einziger Arbeiter allein'],
+      e: 'In der Manufaktur arbeiten viele Arbeiter mit der Hand, Maschinen gibt es noch nicht.' }
+  ];
+
+  function $(id) { return document.getElementById(id); }
+  function alle(sel, wurzel) { return Array.prototype.slice.call((wurzel || document).querySelectorAll(sel)); }
+  function neu(tag, klasse, text) {
+    var e = document.createElement(tag);
+    if (klasse) e.className = klasse;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+  function mischen(a) {
+    for (var i = a.length - 1; i !== 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+  function lesen(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function schreiben(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+
+  /* ---------- Heller und dunkler Modus ---------- */
+  function modusZeigen() {
+    var dunkel = document.documentElement.getAttribute('data-modus') === 'dunkel';
+    var b = $('modus');
+    b.textContent = dunkel ? 'Hell' : 'Dunkel';
+    b.setAttribute('aria-label', dunkel ? 'Hellen Modus einschalten' : 'Dunklen Modus einschalten');
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', dunkel ? '#0d1740' : '#16307f');
+  }
+  $('modus').addEventListener('click', function () {
+    var dunkel = document.documentElement.getAttribute('data-modus') === 'dunkel';
+    var jetzt = dunkel ? 'hell' : 'dunkel';
+    document.documentElement.setAttribute('data-modus', jetzt);
+    schreiben('abs-modus', jetzt);
+    modusZeigen();
+  });
+
+  /* ---------- "Kann ich" ---------- */
+  var kann = {};
+  try {
+    var gespeichert = JSON.parse(lesen('abs-kann') || '{}');
+    if (gespeichert && typeof gespeichert === 'object' && !Array.isArray(gespeichert)) kann = gespeichert;
+  } catch (e) { kann = {}; }
+  function kannZeigen() {
+    var zahl = 0;
+    for (var k = 1; k !== 7; k++) {
+      var ok = kann[k] === true;
+      if (ok) zahl++;
+      alle('[data-kap="' + k + '"]').forEach(function (x) {
+        if (x.classList.contains('kann')) { x.setAttribute('aria-pressed', ok ? 'true' : 'false'); return; }
+        if (ok) x.setAttribute('data-done', ''); else x.removeAttribute('data-done');
+        var sr = x.querySelector('.sr');
+        if (sr) sr.textContent = ok ? ' (kann ich)' : '';
+      });
+    }
+    $('stand').textContent = zahl === 6 ? 'Stark! Du kannst alle 6 Kapitel.' : 'Du kannst ' + zahl + ' von 6 Kapiteln.';
+  }
+  alle('.kann').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var k = b.getAttribute('data-kap');
+      kann[k] = kann[k] !== true;
+      schreiben('abs-kann', JSON.stringify(kann));
+      kannZeigen();
+    });
+  });
+
+  /* ---------- Karteikarten ---------- */
+  var reihe = KARTEN.map(function (x, i) { return i; });
+  var kNr = 0, hinten = false;
+  function karteZeigen() {
+    var k = KARTEN[reihe[kNr]];
+    $('k-seite').textContent = hinten ? 'Antwort' : 'Frage';
+    $('k-text').textContent = hinten ? k[1] : k[0];
+    $('k-tipp').textContent = hinten ? 'Tippen: zurück zur Frage' : 'Tippen: Antwort zeigen';
+    $('karte').classList.toggle('hinten', hinten);
+    $('k-zaehler').textContent = 'Karte ' + (kNr + 1) + ' von ' + KARTEN.length;
+  }
+  $('karte').addEventListener('click', function () {
+    var karte = $('karte');
+    var ruhig = false;
+    try { ruhig = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); } catch (e) {}
+    hinten = !hinten;
+    if (ruhig) { karteZeigen(); return; }
+    karte.classList.remove('dreh');
+    void karte.offsetWidth;
+    karte.classList.add('dreh');
+    setTimeout(karteZeigen, 140);
+  });
+  function karteGeh(schritt) {
+    kNr = (kNr + schritt + KARTEN.length) % KARTEN.length;
+    hinten = false;
+    $('karte').classList.remove('dreh');
+    karteZeigen();
+  }
+  $('k-zurueck').addEventListener('click', function () { karteGeh(-1); });
+  $('k-weiter').addEventListener('click', function () { karteGeh(1); });
+  $('k-mischen').addEventListener('click', function () { mischen(reihe); kNr = 0; karteGeh(0); });
+
+  /* ---------- Quiz ---------- */
+  var quiz = { laeuft: false, fragen: [], nr: 0, punkte: 0, fehler: {} };
+  var sperre = 0; /* kurz nach einem Seitenwechsel im Quiz zählt kein Tipp: schützt vor Doppeltippen */
+  function fokusAuf(el) {
+    if (!el) return;
+    el.tabIndex = -1;
+    try { el.focus({ preventScroll: true }); } catch (e) {}
+  }
+  function quizStart(fokus) {
+    quiz.laeuft = true;
+    quiz.fragen = mischen(QUIZ.slice());
+    quiz.nr = 0;
+    quiz.punkte = 0;
+    quiz.fehler = {};
+    frageZeigen(fokus);
+  }
+  function frageZeigen(fokus) {
+    var box = $('quiz-box');
+    var f = quiz.fragen[quiz.nr];
+    var n = quiz.fragen.length;
+    box.textContent = '';
+    box.appendChild(neu('p', 'zaehler', 'Frage ' + (quiz.nr + 1) + ' von ' + n));
+    var fort = neu('div', 'fort');
+    var strich = neu('span');
+    strich.style.width = (quiz.nr / n * 100) + '%';
+    fort.appendChild(strich);
+    box.appendChild(fort);
+    box.appendChild(neu('h2', 'frage', f.f));
+    var liste = neu('div', 'antworten');
+    var rueck = neu('div', 'rueck');
+    rueck.setAttribute('role', 'status');
+    rueck.hidden = true;
+    var weiter = neu('button', 'btn blau quiz-weiter', quiz.nr === n - 1 ? 'Ergebnis ansehen' : 'Weiter');
+    weiter.type = 'button';
+    weiter.hidden = true;
+    var wahl = mischen(f.a.map(function (text, i) { return { text: text, ok: i === 0 }; }));
+    wahl.forEach(function (w) {
+      var b = neu('button', 'antwort', w.text);
+      b.type = 'button';
+      w.knopf = b;
+      b.addEventListener('click', function () {
+        if (Date.now() < sperre) return;
+        wahl.forEach(function (x) {
+          x.knopf.disabled = true;
+          if (x.ok) x.knopf.classList.add('richtig');
+        });
+        if (w.ok) quiz.punkte++;
+        else { b.classList.add('falsch'); quiz.fehler[f.k] = true; }
+        rueck.className = 'rueck ' + (w.ok ? 'ok' : 'nein');
+        rueck.textContent = '';
+        rueck.appendChild(neu('strong', '', w.ok ? 'Richtig' : 'Leider falsch'));
+        rueck.appendChild(neu('span', '', f.e));
+        rueck.hidden = false;
+        weiter.hidden = false;
+        try { weiter.focus({ preventScroll: true }); } catch (e) {}
+        if (weiter.scrollIntoView) weiter.scrollIntoView({ block: 'nearest' });
+      });
+      liste.appendChild(b);
+    });
+    weiter.addEventListener('click', function () {
+      quiz.nr++;
+      if (quiz.nr === n) ergebnisZeigen(true); else frageZeigen(true);
+      window.scrollTo(0, 0);
+    });
+    box.appendChild(liste);
+    box.appendChild(rueck);
+    box.appendChild(weiter);
+    sperre = Date.now() + 300;
+    if (fokus) fokusAuf(box.querySelector('h2'));
+  }
+  function ergebnisZeigen(fokus) {
+    var box = $('quiz-box');
+    var n = quiz.fragen.length;
+    quiz.laeuft = false;
+    box.textContent = '';
+    box.appendChild(neu('p', 'zaehler', 'Dein Ergebnis'));
+    box.appendChild(neu('p', 'punktzahl', quiz.punkte + ' von ' + n + ' Punkten'));
+    var satz = 'Lies die Kapitel noch einmal. Dann versuche es wieder.';
+    if (quiz.punkte === n) satz = 'Stark! Alles richtig.';
+    else if (quiz.punkte + 3 >= n) satz = 'Sehr gut! Das sitzt fast alles.';
+    else if (quiz.punkte * 2 >= n) satz = 'Gut. Übe noch die Kapitel mit Fehlern.';
+    box.appendChild(neu('p', '', satz));
+    var kapitel = Object.keys(quiz.fehler).sort();
+    if (kapitel.length) {
+      box.appendChild(neu('h2', '', 'Hier hattest du Fehler'));
+      var liste = neu('div', 'fehler');
+      kapitel.forEach(function (k) {
+        var a = neu('a', 'btn rand', NAMEN['k' + k]);
+        a.href = '#k' + k;
+        a.addEventListener('click', function (ev) { if (Date.now() < sperre) ev.preventDefault(); });
+        liste.appendChild(a);
+      });
+      box.appendChild(liste);
+    }
+    var nochmal = neu('button', 'btn gold quiz-weiter', 'Noch einmal');
+    nochmal.type = 'button';
+    nochmal.addEventListener('click', function () {
+      if (Date.now() < sperre) return;
+      quizStart(true);
+      window.scrollTo(0, 0);
+    });
+    box.appendChild(nochmal);
+    sperre = Date.now() + 300;
+    if (fokus) fokusAuf(box.querySelector('.punktzahl'));
+  }
+
+  /* ---------- Immer nur eine Seite sichtbar ---------- */
+  var ersterAufruf = true;
+  function zeigen(id) {
+    if (SEITEN.indexOf(id) === -1) id = 'start';
+    SEITEN.forEach(function (s) { $('p-' + s).hidden = (s !== id); });
+    var nav = $('nav');
+    alle('a', nav).forEach(function (a) {
+      if (a.getAttribute('data-seite') === id) {
+        a.setAttribute('aria-current', 'page');
+        nav.scrollLeft = a.offsetLeft - (nav.clientWidth - a.offsetWidth) / 2;
+      } else {
+        a.removeAttribute('aria-current');
+      }
+    });
+    document.title = (NAMEN[id] ? NAMEN[id] + ' – ' : '') + TITEL;
+    if (id === 'quiz' && !quiz.laeuft) quizStart();
+    window.scrollTo(0, 0);
+    if (!ersterAufruf) {
+      var h = $('p-' + id).querySelector('h1');
+      if (h) { try { h.focus({ preventScroll: true }); } catch (e) {} }
+    }
+    ersterAufruf = false;
+  }
+  window.addEventListener('hashchange', function () { zeigen(location.hash.slice(1)); });
+
+  modusZeigen();
+  kannZeigen();
+  karteZeigen();
+  zeigen(location.hash.slice(1));
+})();
+</script>
+</body>
+</html>
